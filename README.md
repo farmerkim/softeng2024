@@ -31,5 +31,19 @@
 
 9.19
 
-  
+  homework 5
+
+  rasberry pi 5를 이용하여 hello.py 구현하기
+  ![image](https://github.com/user-attachments/assets/9f0465d3-aa85-41c6-b8f3-b22cd648a444)
+
+9.24
+
+  homework 6
+
+  팀 홈페이지 만들기(최소 3개의 html, index.html 포함, 최상위 폴더에 docs 만들어 저장, Github setting pages 기
+  능 이용 웹 접속 가능하도록 작성)
+
+  homework 7
+
+  과제06에서 사용한 코드를 템플릿으로 변환하여 구현, Fast/flask 템플릿 기능 활용하여 구현
   
