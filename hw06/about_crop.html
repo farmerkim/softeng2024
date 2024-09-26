@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>작목반 조직도/ 소개</title>
+    <link href="./practice.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="add_two_numbers.js"></script>
+    <script type="text/javascript" src="what_time_is_it.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .node {
+            background-color: #fff;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 10px;
+            position: relative;
+        }
+        .line {
+            height: 20px;
+            width: 2px;
+            background-color: #007BFF;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .flex-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">홈</a>
+        <a href="./about_crop.html">작목반 조직도/ 소개</a>
+        <a href="./crop_yield_meter.html">수확량계산기</a>
+    </nav>
+
+   <h1>조직도 및 작목반 소개</h1>
+    <div class="org-chart">
+        <div class="node">전북대학교 총장</div>
+        <div class="line"></div>
+        <div class="flex-container">
+            <div class="node">축산분야 교직원</div>
+            <div class="node">원예분야 교직원</div>
+        </div>
+        <div class="line"></div>
+        <div class="flex-container">
+            <div class="node">토마토 작목반장</div>
+            <div class="node">오이 작목반장</div>
+            <div class="node">포도 작목반장</div>
+            <div class="node">멜론 작목반장</div>
+            <div class="node">상추 작목반장</div>
+        </div>
+        <div class="line"></div>
+        <div class="flex-container">
+            <div class="node">토마토 작목반원</div>
+            <div class="node">오이 작목반원</div>
+            <div class="node">포도 작목반원</div>
+            <div class="node">멜론 작목반원</div>
+            <div class="node">상추 작목반원</div>
+        </div>
+    </div>
+
+    <p>행사장소: 전북대학교 JBNU 인터네셔널 센터, 행사 일시: 1년에 4~5회 판매</p>
+    <img src="./images/tomato.jpg" width="300px">
+    <img src="./images/cucumber.jpg" width="300px">
+    <img src="./images/grape.png" width="300px">
+    <img src="./images/mellon.png" width="300px">
+    <img src="./images/sangchu.png" width="300px">
+</body>
+</html>
