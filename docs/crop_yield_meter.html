@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농작물 수확량 계산기</title>
+    <script>
+        function calculateYield() {
+            // 입력값을 가져옴
+            let avgWeight = parseFloat(document.getElementById('avgWeight').value);
+            let area = parseFloat(document.getElementById('area').value);
+            let plantsPerArea = parseFloat(document.getElementById('plantsPerArea').value);
+
+            // 수확량 계산
+            let totalYield = avgWeight * area * plantsPerArea;
+
+            // 결과를 표시
+            document.getElementById('result').innerText = "예상 수확량: " + totalYield + " kg";
+        }
+    </script>
+</head>
+<body>
+    <h1>농작물 수확량 계산기</h1>
+
+    <label for="avgWeight">작물당 평균 무게 (kg):</label>
+    <input id="avgWeight" type="number" value="1" onkeyup="calculateYield()">
+    <br><br>
+
+    <label for="area">재배 면적 (㎡):</label>
+    <input id="area" type="number" value="100" onkeyup="calculateYield()">
+    <br><br>
+
+    <label for="plantsPerArea">㎡당 작물 수 (개):</label>
+    <input id="plantsPerArea" type="number" value="10" onkeyup="calculateYield()">
+    <br><br>
+
+    <div id="result">예상 수확량: 0 kg</div>
+</body>
+</html>
