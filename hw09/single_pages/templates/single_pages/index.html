@@ -1,0 +1,40 @@
+{% extends './layout.html' %}
+{% load static %}
+
+{% block title %}
+파종, 정식, 수확, 판매
+{% endblock %}
+
+{% block content %}
+    <h1>파종, 정식, 수확, 판매</h1>
+
+    <h2>파종</h2>
+    <p>파종은 씨앗을 땅에 심는 단계로, 재배의 첫 번째 과정입니다. 이 과정에서는 작물의 종류에 따라 다른 기술과 준비가 필요합니다.</p>
+
+    <h2>정식</h2>
+    <p>정식은 파종된 모종을 밭에 옮겨 심는 과정입니다. 모종을 키운 후 옮겨 심음으로써 작물이 좀 더 안정적으로 자랄 수 있도록 합니다.</p>
+
+    <h2>수확</h2>
+    <p>수확은 작물이 성숙했을 때 이를 거둬들이는 과정입니다. 작물의 종류에 따라 적절한 수확 시기와 방법이 다릅니다.</p>
+
+    <h2>판매</h2>
+    <p>최종 단계인 판매는 수확한 농산물을 시장에 내놓고 소비자에게 판매하는 과정입니다.</p>
+
+    <button onclick="whatTimeIsIt()">현재시간</button>
+    <hr />
+
+    <p>농산물 관련 내용들이 궁금하시면 이 사이트로 들어가보세요:</p>
+    <a href="https://www.nongsaro.go.kr">농사로 사이트 들어가기</a>
+    <hr />
+    <img src="{% static 'single_pages/images/nongsaro.jpg' %}" width="600px">
+    <script src="{% static 'what_time_is_it.js' %}"></script>
+
+
+{% endblock %}
+
+{% block footer %}
+    <footer>
+        <p>&copy; 2024 농대생. 모든 권리 보유.</p>
+        <a href="https://www.nongsaro.go.kr">농사로 사이트 방문하기</a>
+    </footer>
+{% endblock %}
