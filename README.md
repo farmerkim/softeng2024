@@ -55,6 +55,10 @@
   수업시간에 본 것처럼 리스트로 2-3개 정도 항목을 만들어서 출력
   과제07에서 작성한 코드를 바탕으로 bootstrap, fontawesome 이용해서 만들기
   ![image](https://github.com/user-attachments/assets/05f77ddd-a181-42c9-99ee-493d3238fefe)
+  <img width="960" alt="image" src="https://github.com/user-attachments/assets/e0deb6bf-fa12-4abc-8916-4ee579fcb86e">
+  <img width="960" alt="image" src="https://github.com/user-attachments/assets/5d148a67-4a56-43bd-aeab-8accf6d15a6a">
+
+
 
   
 10.22
