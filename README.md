@@ -54,6 +54,8 @@
   블로그 글을 보여줄 수 있도록 csv로 저장된 데이터를 pandas로 읽어서 렌더링되도록 구현. 너무 어려우면
   수업시간에 본 것처럼 리스트로 2-3개 정도 항목을 만들어서 출력
   과제07에서 작성한 코드를 바탕으로 bootstrap, fontawesome 이용해서 만들기
+  ![image](https://github.com/user-attachments/assets/05f77ddd-a181-42c9-99ee-493d3238fefe)
+
   
 10.22
 
