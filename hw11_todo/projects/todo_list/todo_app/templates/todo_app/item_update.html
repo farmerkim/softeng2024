@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>{{ title }}</h3>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <!-- 테이블을 사용하여 각 필드를 명확히 렌더링 -->
+        <table>
+            {% for field in form %}
+                <tr>
+                    <td>{{ field.label }}</td>
+                    <td>{{ field }}</td>
+                    {% if field.help_text %}
+                        <td><small>{{ field.help_text }}</small></td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+
+        <input type="submit" value="Submit">
+
+        <!-- 취소 버튼은 리스트 페이지로 리디렉션 -->
+        <input type="button" value="Cancel" onclick="location.href='{% url 'list' todo_list.id %}'">
+    </form>
+
+{% endblock %}
