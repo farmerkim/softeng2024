@@ -72,3 +72,25 @@
   homework 10
 
   hw09에서 추가적으로 blog 앱을 만들고 관리자 모드에서 글 작성하여 구현하기 추가적으로 urls.py 설정까지 하기기
+
+11.05
+
+  homework 11
+
+  todo 앱 만들기
+  <img width="960" alt="image" src="https://github.com/user-attachments/assets/2004d8cb-4a38-46d1-8a22-66dd4ab0f562">
+
+11.12
+
+  homework 12
+
+  startbootstrap 템플릿 활용하여 blog 적용하기
+  <img width="960" alt="image" src="https://github.com/user-attachments/assets/6de271a6-5046-4565-864d-30bfb669649c">
+
+11.26
+
+  homework 13
+
+  blog에 템플릿에 맞게 사용자, 카테고리, 태그 추가하기기
+
+
