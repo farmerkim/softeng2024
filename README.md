@@ -92,5 +92,6 @@
   homework 13
 
   blog에 템플릿에 맞게 사용자, 카테고리, 태그 추가하기
+  <img width="960" alt="image" src="https://github.com/user-attachments/assets/180ba17f-0b96-4ecd-83dd-24c5dbc8323e">
 
 
