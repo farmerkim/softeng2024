@@ -1,0 +1,49 @@
+{% extends './layout.html' %}
+{% load static %}
+
+{% block title %}
+작목반 조직도/ 소개
+{% endblock %}
+
+{% block content %}
+<h1>조직도 및 작목반 소개</h1>
+
+<div class="org-chart">
+    <div class="node">전북대학교 총장</div>
+    <div class="line"></div>
+    
+    <div class="flex-container">
+        <div class="node">축산분야 교직원</div>
+        <div class="node">원예분야 교직원</div>
+    </div>
+    
+    <div class="line"></div>
+    
+    <div class="flex-container">
+        <div class="node">토마토 작목반장</div>
+        <div class="node">오이 작목반장</div>
+        <div class="node">포도 작목반장</div>
+        <div class="node">멜론 작목반장</div>
+        <div class="node">상추 작목반장</div>
+    </div>
+    
+    <div class="line"></div>
+    
+    <div class="flex-container">
+        <div class="node">토마토 작목반원</div>
+        <div class="node">오이 작목반원</div>
+        <div class="node">포도 작목반원</div>
+        <div class="node">멜론 작목반원</div>
+        <div class="node">상추 작목반원</div>
+    </div>
+</div>
+
+<p>행사장소: 전북대학교 JBNU 인터네셔널 센터, 행사 일시: 1년에 4~5회 판매</p>
+
+<!-- 이미지 부분 -->
+<img src="{% static 'single_pages/images/tomato.jpg' %}" width="300px">
+<img src="{% static 'single_pages/images/cucumber.jpg' %}" width="300px">
+<img src="{% static 'single_pages/images/grape.jpg' %}" width="300px">
+<img src="{% static 'single_pages/images/mellon.jpg' %}" width="300px">
+<img src="{% static 'single_pages/images/sangchu.jpg' %}" width="300px">
+{% endblock %}
