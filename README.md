@@ -99,7 +99,12 @@
   homework 14
 
   포스트 수정, 작성 관리자 페이지가 아닌 홈페이지 내에서 가능하게 구현하기
-  ![image](https://github.com/user-attachments/assets/585b1c2d-1c52-40de-8acf-b9f28f4e6568)
+  <img width="959" alt="image" src="https://github.com/user-attachments/assets/888648bb-996b-4bf7-bd6c-1c33e033ba56">
+  <img width="960" alt="image" src="https://github.com/user-attachments/assets/c9ea826c-b25a-4cae-8da5-521c351e9932">
+
+
+
+
 
 
 
