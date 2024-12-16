@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트 영농 관리</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #27ae60;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        스마트 영농 관리 시스템
+    </header>
+    <nav>
+        <a href="/">홈</a>
+    </nav>
+    <main>
+        <!-- 메인 콘텐츠 -->
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        © 2024 농모준모. 차윤서 모든 권리 보유.
+    </footer>
+</body>
+</html>
