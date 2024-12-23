@@ -1,0 +1,30 @@
+{% extends "blog/layout.html" %}
+{% block title %}Search Results{% endblock %}
+{% block content %}
+<header class="py-5 bg-light border-bottom mb-4">
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="fw-bolder">Search Results</h1>
+            <p class="lead mb-0">Results for "{{ query }}"</p>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            {% if search_results %}
+                {% for post in search_results %}
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="{% url 'blog:single_post' post.pk %}">{{ post.title }}</a></h5>
+                            <p class="card-text">{{ post.content|truncatewords:30 }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No results found for "{{ query }}".</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

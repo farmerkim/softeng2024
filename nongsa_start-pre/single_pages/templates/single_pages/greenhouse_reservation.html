@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스마트팜 온실 분할 대여 시스템</title> 
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f9; }
+    .container { max-width: 800px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+    h1 { text-align: center; color: #333; }
+    .form-group { margin-bottom: 15px; }
+    label { display: block; font-weight: bold; margin-bottom: 5px; }
+    select, input[type="number"], input[type="text"], input[type="file"] { width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; }
+    .submit-btn { display: block; width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; }
+    .submit-btn:hover { background-color: #45a049; }
+    .reservation-list { margin-top: 30px; }
+    .reservation-item { background-color: #f9f9f9; padding: 10px; margin: 5px 0; border: 1px solid #ddd; border-radius: 4px; }
+    .reservation-item button { background-color: #f44336; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px; }
+    .reservation-item button:hover { background-color: #d32f2f; }
+    .image-container { text-align: center; margin-bottom: 20px; }
+    .image-container img { width: 100%; max-width: 600px; border-radius: 8px; }
+    .price-board { margin-top: 20px; padding: 10px; background-color: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 4px; }
+    .price-board h3 { text-align: center; color: #2e7d32; }
+    .price-board p { font-size: 16px; color: #2e7d32; }
+  </style>
+</head>
+<body>
+  <div style="background-color: #ffecb3; padding: 15px; margin-bottom: 20px; border: 1px solid #ffe082; border-radius: 4px;">
+    <strong>안내:</strong> 이 시스템은 스마트팜 온실의 분할 대여를 돕기 위해 만들어졌습니다. 각 항목을 빠짐없이 입력해 주세요.
+    문의 사항이 있으시면 관리팀에 연락 바랍니다.
+  </div>
+
+  <div class="image-container">
+    <img src="greenhouse-layout.jpg" alt="온실 배치도">
+  </div>
+
+  <div class="container">
+    <h1>온실 예약 시스템</h1>
+
+    <div class="form-group">
+      <p style="background-color: #e8f5e9; padding: 10px; border: 1px solid #c8e6c9; border-radius: 4px; color: #2e7d32;">
+        안녕하세요! 이 시스템은 스마트팜 온실을 효율적으로 대여할 수 있도록 설계되었습니다. 
+        온실과 대여 기간을 선택하고 필요한 정보를 입력하시면 예약이 완료됩니다. 사업계획서 파일은 필수로 업로드해 주세요.
+      </p>
+    </div>
+
+    <!-- 가격 안내판 -->
+    <div class="price-board">
+      <h3>온실 대여 가격</h3>
+      <p>온실 1, 2, 3: 1개월에 50만원</p>
+      <p>온실 4, 5, 6: 1개월에 60만원</p>
+    </div>
+
+    <form id="reservationForm">
+      <div class="form-group">
+        <label for="greenhouse">온실 선택</label>
+        <select id="greenhouse" name="greenhouse" required>
+          <option value="">온실을 선택하세요</option>
+          <option value="온실 1">온실 1 (50평)</option>
+          <option value="온실 2">온실 2 (50평)</option>
+          <option value="온실 3">온실 3 (50평)</option>
+          <option value="온실 4">온실 4 (50평)</option>
+          <option value="온실 5">온실 5 (50평)</option>
+          <option value="온실 6">온실 6 (50평)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="rentalPeriod">대여 기간</label>
+        <select id="rentalPeriod" name="rentalPeriod" required>
+          <option value="">기간을 선택하세요</option>
+          <option value="개월">개월</option>
+          <option value="년">년</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="duration">대여 기간 (숫자)</label>
+        <input type="number" id="duration" name="duration" min="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="name">성함</label>
+        <input type="text" id="name" name="name" placeholder="성함을 입력하세요" required>
+      </div>
+
+      <div class="form-group">
+        <label for="price">가격</label>
+        <input type="text" id="price" name="price" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="businessPlan">사업계획서 제출</label>
+        <input type="file" id="businessPlan" name="businessPlan" accept=".pdf,.hwp" required>
+      </div>
+
+      <button type="submit" class="submit-btn">예약하기</button>
+    </form>
+
+    <div class="reservation-list" id="reservationList">
+      <h2>예약 목록</h2>
+      <p style="font-size: 14px; color: #666;">
+        아래는 현재 예약된 내역입니다. 예약 취소 또는 삭제는 버튼을 클릭하세요. 
+        예약 완료 후에는 관리팀 확인을 거쳐 최종 승인됩니다.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const greenhousePrices = {
+      "온실 1": 500000,  // 1개월 가격
+      "온실 2": 500000,  // 1개월 가격
+      "온실 3": 500000,  // 1개월 가격
+      "온실 4": 600000,  // 1개월 가격
+      "온실 5": 600000,  // 1개월 가격
+      "온실 6": 600000   // 1개월 가격
+    };
+
+    function calculatePrice(greenhouse, rentalPeriod, duration) {
+      const pricePerMonth = greenhousePrices[greenhouse];  // 온실에 따라 1개월 가격 설정
+      let totalPrice = pricePerMonth * duration;
+
+      if (rentalPeriod === "년") {
+        totalPrice *= 12;  // 1년 대여 시 가격 계산
+      }
+
+      return totalPrice;
+    }
+
+    document.getElementById("reservationForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const greenhouse = document.getElementById("greenhouse").value;
+      const rentalPeriod = document.getElementById("rentalPeriod").value;
+      const duration = parseInt(document.getElementById("duration").value);
+      const name = document.getElementById("name").value;
+      const businessPlan = document.getElementById("businessPlan").files[0];
+
+      if (!greenhouse || !rentalPeriod || !duration || !name || !businessPlan) {
+        alert("모든 필드를 채워 주세요.");
+        return;
+      }
+
+      const totalPrice = calculatePrice(greenhouse, rentalPeriod, duration);
+
+      document.getElementById("price").value = `총 금액: ${totalPrice.toLocaleString()}원`;
+
+      const reservationList = document.getElementById("reservationList");
+      const reservationItem = document.createElement("div");
+      reservationItem.className = "reservation-item";
+      reservationItem.innerHTML = `
+        <strong>${name}</strong> - ${greenhouse} - ${duration} ${rentalPeriod} - ${totalPrice.toLocaleString()}원
+        <button class="delete-btn">삭제</button>
+      `;
+      reservationList.appendChild(reservationItem);
+
+      document.querySelector(".delete-btn").addEventListener("click", function() {
+        reservationItem.remove();
+      });
+    });
+  </script>
+</body>
+</html>
