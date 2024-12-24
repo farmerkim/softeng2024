@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: gunicorn nongsa_start.wsgi:application --bind 0.0.0.0.17004
+    volume:
+      - ./:/usr/src/app/
+    port:
+      - 17004:17004

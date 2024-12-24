@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #81C784;
+            --accent-color: #FFA000;
+            --background-color: #F9FBE7;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 1rem;
+            text-align: right;
+            margin-bottom: 2rem;
+        }
+
+        .home-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #F57C00;
+        }
+
+        .farmers-title {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 50px 0;
+            letter-spacing: 5px;
+        }
+
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+            justify-items: center;
+        }
+
+        .team-member {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: var(--background-color);
+            padding: 10px;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        .member-name {
+            color: var(--text-color);
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .member-title {
+            color: var(--primary-color);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .member-subtitle {
+            color: var(--text-color);
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .member-description {
+            color: var(--text-color);
+            font-size: 14px;
+            line-height: 1.6;
+            max-width: 300px;
+            margin: 0 auto 15px auto;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+            color: var(--text-color);
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .contact-info i {
+            color: var(--primary-color);
+        }
+
+        .divider {
+            width: 30px;
+            height: 2px;
+            background: var(--primary-color);
+            margin: 15px auto;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="{% url 'single_pages:index_page' %}" class="home-button">
+            <i class="fas fa-home"></i>
+            홈으로
+        </a>
+    </div>
+
+    <h1 class="farmers-title">FARMERS</h1>
+    
+    <div class="team-container">
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="{% static 'single_pages/images/junmo_1.jpg' %}" alt="김준모" class="profile-image">
+                <h2 class="member-name">김준모</h2>
+                <h3 class="member-title">conscientious farmer</h3>
+                <div class="divider"></div>
+                <h4 class="member-subtitle">스마트팜 보육사업 10기</h4>
+                <p class="member-description">"안정하고 신선한 농산물 생산을 최우선으로, 여러분의 건강과 행복을 주선으로 농사짓겠습니다."</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 010-1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> junmo@example.com</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="{% static 'single_pages/images/yunseo.jpg' %}" alt="차윤서" class="profile-image">
+                <h2 class="member-name">차윤서</h2>
+                <h3 class="member-title">working farmer</h3>
+                <div class="divider"></div>
+                <h4 class="member-subtitle">직원</h4>
+                <p class="member-description">"열심히 하겠습니다!"</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 010-9876-5432</p>
+                    <p><i class="fas fa-envelope"></i> yunseo@example.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
