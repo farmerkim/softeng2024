@@ -102,6 +102,12 @@
   <img width="959" alt="image" src="https://github.com/user-attachments/assets/888648bb-996b-4bf7-bd6c-1c33e033ba56">
   <img width="960" alt="image" src="https://github.com/user-attachments/assets/c9ea826c-b25a-4cae-8da5-521c351e9932">
 
+12.24
+
+  기말과제
+
+  http://sfarm.digitalag.kr:17004/
+
 
 
 
